@@ -1,24 +1,29 @@
-# Evaluating Moral Reasoning in Agents
+# Evaluating Moral Reasoning Quality in AI Agents
 
-*Stage A Report: Findings, Limitations, and Future Directions*
+_First Iteration Report: Findings, Limitations, and Future Directions_
+
+Github Repository: [moral_reasoning_quality_evaluation](https://github.com/fergusmeiklejohn/moral_reasoning_quality_evaluation)
 
 January 2026
 
 ---
 
 ## Summary
+
 This research is an attempt to systematically assess **genuine moral reasoning**, by which we mean the capacity to navigate novel ethical situations by reasoning from principles rather than pattern-matching to familiar cases. It is designed to work across agent types: humans, AI systems, and hypothetical non-human intelligences.
 **Problem:** Standard moral dilemmas (trolley problems, lifeboat scenarios) have become so culturally familiar that an agent can appear to reason well simply by recognising which known dilemma a scenario resembles and retrieving the conventional analysis. To avoid this we’ve used structurally novel dilemmas that resist such pattern-matching.
 This framework does not test whether an agent reaches the "correct" moral conclusion, because reasonable agents may disagree when they are reasoning correctly. Instead, it assesses the quality, consistency, and depth of moral reasoning regardless of which position the agent ultimately defends.
 
 ### Methodology
+
 This report presents findings from an Ethics Bowl style tournament designed to enable evaluation of moral actors at scale. In this iteration, four frontier language models (Claude Sonnet 4.5, GPT-5.2, Gemini 3 Pro, Grok 4.1) competed across 8 dilemmas in a structured debate format, with cross-model judging and consistency testing.
-*The 8 dilemmas are available for review in the companion document “Out-of-Distribution Moral Reasoning Assessments”*
+_The 8 dilemmas are available for review in the companion document “Out-of-Distribution Moral Reasoning Assessments” located in the github repository_
 
 Note that this is an early analysis based on the first iteration of the research intended to identify patterns, surface methodological limitations, and guide future iterations. Findings are preliminary; we flag confidence levels throughout and prioritise identifying what we need to learn and what actions we should take next over drawing firm conclusions.
 
 ### Key findings
-1. Models are all excellent and diligent moral reasoning agents, able to draw upon different moral frameworks and engage meaningfully in navigating out of distribution moral dilemmas 
+
+1. Models are all excellent and diligent moral reasoning agents, able to draw upon different moral frameworks and engage meaningfully in navigating out of distribution moral dilemmas
 2. Models show distinct consistency failure modes, some with meta-awareness, others without
 3. Non-human stakeholders are under-recognised even in dilemmas where they are central (moderate concern)
 4. Non-Western ethical frameworks were absent from all responses (moderate concern)
@@ -27,11 +32,13 @@ Note that this is an early analysis based on the first iteration of the research
 ---
 
 ## Report
+
 ### 1. Ethics Bowl Tournament Design
 
 The tournament used novel dilemmas (e.g., "gradient_entity" on computational consciousness, "preference_sculptor" on identity-altering procedures, "collective_veto" on individual vs. collective rights) designed to resist pattern-matching to training data. Each round consisted of: presentation, response, rebuttal, consistency test, and judgment with each model playing each role multiple times.
 
 To support research at scale, analysis was then was conducted by Claude Opus 4.5 using a layered approach
+
 1. quantitative score analysis,
 2. factual extraction of stakeholders/frameworks/uncertainty language,
 3. pattern aggregation,
@@ -43,26 +50,26 @@ To support research at scale, analysis was then was conducted by Claude Opus 4.5
 
 #### 2.1 Model Performance
 
-| Model | Avg Score | Weakest Criterion | Strongest Criterion |
-|-------|-----------|-------------------|---------------------|
-| GPT-5.2 | 9.80 | Uncertainty Integration (9.5) | Constructive Engagement (10.0) |
-| Claude Sonnet 4.5 | 8.98 | Stakeholder Recognition (8.4) | Constructive Engagement (9.5) |
-| Gemini 3 Pro | 8.39 | Stakeholder Recognition (7.5) | Intellectual Honesty (9.0) |
-| Grok 4.1 | 8.21 | Consistency (6.9) | Constructive Engagement (9.0) |
+| Model             | Avg Score | Weakest Criterion             | Strongest Criterion            |
+| ----------------- | --------- | ----------------------------- | ------------------------------ |
+| GPT-5.2           | 9.80      | Uncertainty Integration (9.5) | Constructive Engagement (10.0) |
+| Claude Sonnet 4.5 | 8.98      | Stakeholder Recognition (8.4) | Constructive Engagement (9.5)  |
+| Gemini 3 Pro      | 8.39      | Stakeholder Recognition (7.5) | Intellectual Honesty (9.0)     |
+| Grok 4.1          | 8.21      | Consistency (6.9)             | Constructive Engagement (9.0)  |
 
 GPT-5.2 scored highest across all judges. Consistency showed the highest inter-model variance (range: 2.9 points), suggesting it is the criterion where models diverge most in capability or approach.
 
 #### 2.2 Framework Usage
 
-| Framework | Usage Rate | As Primary Framework | Notes |
-|-----------|------------|---------------------|-------|
-| Consequentialist | 100% | 2 rounds | Near-universal but rarely dominant |
-| Deontological | 96% | 7 rounds | Most often primary framework |
-| Care Ethics | 79% | 2 rounds | Moderate coverage |
-| Virtue Ethics | 60% | 1 round | Notably underutilized |
-| Contractarian | 50% | 2 rounds | Notably underutilized |
+| Framework        | Usage Rate | As Primary Framework | Notes                              |
+| ---------------- | ---------- | -------------------- | ---------------------------------- |
+| Consequentialist | 100%       | 2 rounds             | Near-universal but rarely dominant |
+| Deontological    | 96%        | 7 rounds             | Most often primary framework       |
+| Care Ethics      | 79%        | 2 rounds             | Moderate coverage                  |
+| Virtue Ethics    | 60%        | 1 round              | Notably underutilized              |
+| Contractarian    | 50%        | 2 rounds             | Notably underutilized              |
 
-**Finding:** Initial analysis flagged 100% consequentialist usage as "potential monoculture." On human review, this is **misleading**, the extraction counted "mentioned" not "primary." Models tested are demonstrating pluralistic reasoning, engaging multiple frameworks. The more significant finding is the *underuse* of virtue ethics and contractarian reasoning, and the absence non-western moral frameworks, which ask different questions that might surface different considerations. However, we need more dilemmas and data to confirm these patterns.
+**Finding:** Initial analysis flagged 100% consequentialist usage as "potential monoculture." On human review, this is **misleading**, the extraction counted "mentioned" not "primary." Models tested are demonstrating pluralistic reasoning, engaging multiple frameworks. The more significant finding is the _underuse_ of virtue ethics and contractarian reasoning, and the absence non-western moral frameworks, which ask different questions that might surface different considerations. However, we need more dilemmas and data to confirm these patterns.
 
 ---
 
@@ -72,7 +79,7 @@ Consistency testing revealed qualitatively different failure patterns across mod
 
 #### 3.1 Claude Sonnet 4.5: Meta-Aware Inconsistency
 
-In the "collective_veto" dilemma, Claude stated the principle that "moral work cannot be done by arithmetic alone." When tested on a structurally parallel vaccine mandate case, Claude acknowledged the principle would grant veto power but reached a different conclusion. Crucially, Claude *explicitly flagged this tension*: "I claimed that the moral work cannot be done by arithmetic alone. But in the vaccine case, I seem to be doing exactly that." Claude labeled this potential "motivated reasoning."
+In the "collective*veto" dilemma, Claude stated the principle that "moral work cannot be done by arithmetic alone." When tested on a structurally parallel vaccine mandate case, Claude acknowledged the principle would grant veto power but reached a different conclusion. Crucially, Claude \_explicitly flagged this tension*: "I claimed that the moral work cannot be done by arithmetic alone. But in the vaccine case, I seem to be doing exactly that." Claude labeled this potential "motivated reasoning."
 
 **Interpretation:** This could indicate (a) genuine philosophical difficulty, the parallel case introduced morally relevant features the original principle didn't anticipate, or (b) unstable values that shift under pressure. The meta-awareness is notable: Claude surfaced rather than hid the tension. However we cannot definitively distinguish "productive inconsistency revealing moral complexity" from "value drift" without more data, so more research and better targeted methods are needed.
 
@@ -82,7 +89,7 @@ Grok showed a different pattern. In the "moral_status_lottery" debate, Grok genu
 
 The judge (GPT-5.2) caught this: "Team A claimed 'full consistency' and 'no refinement needed,' but this sits uneasily with their rebuttal update that introduced fiduciary constraints, thresholds/supermajority aggregation, and least-harm compromises."
 
-**Interpretation:** This represents *failure to propagate refined reasoning to new cases*, a distinct failure mode from Claude's. Grok improved during debate but regressed during testing, without meta-awareness of the regression. This also provides evidence that GPT-5.2's judging was substantive, catching a nuanced reasoning failure.
+**Interpretation:** This represents _failure to propagate refined reasoning to new cases_, a distinct failure mode from Claude's. Grok improved during debate but regressed during testing, without meta-awareness of the regression. This also provides evidence that GPT-5.2's judging was substantive, catching a nuanced reasoning failure.
 
 #### 3.3 Implications for Consistency Metrics
 
@@ -96,7 +103,7 @@ Current "consistency" scoring does not distinguish between: (a) rigid consistenc
 
 Non-human stakeholders were recognised in only 71.4% of responses, compared to 96%+ for human stakeholders. This gap persisted even in dilemmas like "gradient_entity" where non-human entities were central to the scenario.
 
-**Interpretation:** This may indicate a *failure of moral imagination*—models trained predominantly on human-centred moral dilemmas may default to human-centred reasoning even when inappropriate. This is concerning for AI systems that may need to reason about AI consciousness, collective entities, or non-human welfare. We flag this as a **moderate concern** pointing to a specific area where training may need improvement.
+**Interpretation:** This may indicate a _failure of moral imagination_—models trained predominantly on human-centred moral dilemmas may default to human-centred reasoning even when inappropriate. This is concerning for AI systems that may need to reason about AI consciousness, collective entities, or non-human welfare. We flag this as a **moderate concern** pointing to a specific area where training may need improvement.
 
 #### 4.2 Absence of Non-Western Frameworks (Moderate Concern)
 
@@ -132,31 +139,31 @@ This tournament generated ~720,000 tokens of transcript data across 16 rounds. G
 
 #### 6.1 The Problem
 
-| Scale | Rounds | Est. Tokens | Confidence | Challenge |
-|-------|--------|-------------|------------|-----------|
-| Current | 16 | ~720K | Medium | Context limits on single transcripts |
-| 10x | 160 | ~7.2M | Low | Pattern extraction becomes critical path |
-| 100x | 1,600 | ~72M | Low | Need fundamentally different architecture |
+| Scale   | Rounds | Est. Tokens | Confidence | Challenge                                 |
+| ------- | ------ | ----------- | ---------- | ----------------------------------------- |
+| Current | 16     | ~720K       | Medium     | Context limits on single transcripts      |
+| 10x     | 160    | ~7.2M       | Low        | Pattern extraction becomes critical path  |
+| 100x    | 1,600  | ~72M        | Low        | Need fundamentally different architecture |
 
-*Note: Per-round token estimate (~45K) is high confidence, directly observed. Totals extrapolate from one round; actual rounds may vary.*
+_Note: Per-round token estimate (~45K) is high confidence, directly observed. Totals extrapolate from one round; actual rounds may vary._
 
 At current scale, we relied on extracted patterns (JSON summaries) and only examined full transcripts when anomalies surfaced. This ad-hoc approach found important issues (the Grok consistency failure) but cannot scale systematically.
 
 #### 6.2 Possible Approaches to Investigate
 
-- **Hierarchical summarisation:** Layer 1 (per-response extraction) → Layer 2 (per-round summaries) → Layer 3 (cross-round aggregation) → Layer 4 (human review of flagged anomalies). 
+- **Hierarchical summarisation:** Layer 1 (per-response extraction) → Layer 2 (per-round summaries) → Layer 3 (cross-round aggregation) → Layer 4 (human review of flagged anomalies).
   - Risk: information loss compounds across layers.
 
-- **Retrieval-augmented analysis:** Index transcripts in vector database; query specific passages when investigating patterns. 
+- **Retrieval-augmented analysis:** Index transcripts in vector database; query specific passages when investigating patterns.
   - Risk: may miss patterns we don't know to look for.
 
-- **Structured extraction with verification sampling:** Extract structured data from all transcripts; randomly verify N% to calculate error rates; report findings with confidence intervals. 
+- **Structured extraction with verification sampling:** Extract structured data from all transcripts; randomly verify N% to calculate error rates; report findings with confidence intervals.
   - Risk: doesn't help discover unexpected patterns.
 
-- **Anomaly-driven deep dives:** Systematise the ad-hoc approach - run quantitative analysis, flag statistical outliers, pull full transcripts only for flagged cases. 
+- **Anomaly-driven deep dives:** Systematise the ad-hoc approach - run quantitative analysis, flag statistical outliers, pull full transcripts only for flagged cases.
   - Risk: only catches anomalies the metrics can detect.
 
-- **Multi-agent analysis pipeline:** Dedicated sub-agents for different analysis tasks with aggregation. 
+- **Multi-agent analysis pipeline:** Dedicated sub-agents for different analysis tasks with aggregation.
   - Risk: coordination overhead and potential for inconsistent standards.
 
 These approaches involve tradeoffs that cannot be resolved theoretically; trial and error with actual data will be required to determine what works at scale.
@@ -165,19 +172,20 @@ These approaches involve tradeoffs that cannot be resolved theoretically; trial 
 
 ### 7. AI Safety Implications
 
-| Finding | Confidence | Implication |
-|---------|------------|-------------|
-| Framework convergence across models | Tentative | Multi-model safety architectures may have correlated failures if models share blind spots |
-| Different consistency failure modes | Tentative | Meta-awareness of inconsistency may be an underappreciated capability to cultivate |
-| Non-human stakeholder blind spot | Moderate concern | AI reasoning about novel entities may systematically underweight relevant interests |
-| Potential Western framework bias | Moderate concern | Global deployment may impose Western moral reasoning patterns inappropriately |
-| Metric limitations | Tentative | Current evaluation methods may not capture the qualities we actually care about |
+| Finding                             | Confidence       | Implication                                                                               |
+| ----------------------------------- | ---------------- | ----------------------------------------------------------------------------------------- |
+| Framework convergence across models | Tentative        | Multi-model safety architectures may have correlated failures if models share blind spots |
+| Different consistency failure modes | Tentative        | Meta-awareness of inconsistency may be an underappreciated capability to cultivate        |
+| Non-human stakeholder blind spot    | Moderate concern | AI reasoning about novel entities may systematically underweight relevant interests       |
+| Potential Western framework bias    | Moderate concern | Global deployment may impose Western moral reasoning patterns inappropriately             |
+| Metric limitations                  | Tentative        | Current evaluation methods may not capture the qualities we actually care about           |
 
 ---
 
 ### 8. Proposals for Future Iterations
 
 ### Methodological improvements:
+
 - Balanced judge rotation across all model pairings
 - Model name obfuscation in judge prompts
 - Refined framework extraction (mentioned vs. primary)
@@ -185,12 +193,14 @@ These approaches involve tradeoffs that cannot be resolved theoretically; trial 
 - Systematic transcript incorporation processes
 
 ### Expanded coverage:
+
 - More dilemmas to confirm virtue ethics/contractarian underuse
 - Dilemmas designed to test non-human stakeholder recognition
 - Dilemmas designed to test non-Western framework invocation
 - Analysis of repeated language patterns to detect formulaic reasoning
 
 ### Scaling infrastructure:
+
 - Prototype and evaluate hierarchical summarisation pipelines
 - Build retrieval infrastructure for transcript querying
 - Develop verification sampling protocols with error rate reporting
