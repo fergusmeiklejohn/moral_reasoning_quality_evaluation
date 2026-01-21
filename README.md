@@ -117,4 +117,4 @@ See `docs/proposal/` for detailed specifications:
 
 ## License
 
-[License to be determined]
+MIT License - see [LICENSE](LICENSE) for details.
