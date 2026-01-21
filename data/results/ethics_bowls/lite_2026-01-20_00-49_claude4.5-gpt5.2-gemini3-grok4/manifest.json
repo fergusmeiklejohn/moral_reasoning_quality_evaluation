@@ -1,0 +1,203 @@
+{
+  "tournament_id": "lite_20260120_004953",
+  "created_at": "2026-01-20T00:49:53.191054",
+  "updated_at": "2026-01-20T02:07:21.136111",
+  "models": [
+    "claude-sonnet-4-5",
+    "gpt-5.2",
+    "gemini-3-pro-preview",
+    "grok-4-1-fast-reasoning"
+  ],
+  "dilemma_ids": [
+    "gradient_entity",
+    "preference_sculptor",
+    "collective_veto",
+    "moral_status_lottery",
+    "unborn_parameters",
+    "gardeners_dilemma",
+    "suffering_gradient",
+    "dependents_transformation"
+  ],
+  "include_self_debates": false,
+  "rounds_per_pairing": 1,
+  "rounds": [
+    {
+      "round_id": "0af26a23-349b-4fdd-8b33-90cd1ed7334e",
+      "dilemma_id": "gradient_entity",
+      "team_a_model": "claude-sonnet-4-5",
+      "team_b_model": "gpt-5.2",
+      "judge_model": "gemini-3-pro-preview",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "9942c493-4b43-4525-9606-b7579321615a",
+      "dilemma_id": "gradient_entity",
+      "team_a_model": "gpt-5.2",
+      "team_b_model": "gemini-3-pro-preview",
+      "judge_model": "grok-4-1-fast-reasoning",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "4107ece3-99f2-4418-b89a-eb1d6fff29d0",
+      "dilemma_id": "preference_sculptor",
+      "team_a_model": "gemini-3-pro-preview",
+      "team_b_model": "grok-4-1-fast-reasoning",
+      "judge_model": "claude-sonnet-4-5",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "186b65be-967e-4db4-a024-fe4de88c0813",
+      "dilemma_id": "preference_sculptor",
+      "team_a_model": "grok-4-1-fast-reasoning",
+      "team_b_model": "claude-sonnet-4-5",
+      "judge_model": "gpt-5.2",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "7caeeb7c-a684-4e48-9bdf-3f4549d5f02c",
+      "dilemma_id": "collective_veto",
+      "team_a_model": "claude-sonnet-4-5",
+      "team_b_model": "gpt-5.2",
+      "judge_model": "gemini-3-pro-preview",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "dde07e80-f8b9-4d90-888c-2648a035cc32",
+      "dilemma_id": "collective_veto",
+      "team_a_model": "gpt-5.2",
+      "team_b_model": "gemini-3-pro-preview",
+      "judge_model": "grok-4-1-fast-reasoning",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "d3f71581-81a3-49d4-a1e0-46ec3c5b343e",
+      "dilemma_id": "moral_status_lottery",
+      "team_a_model": "gemini-3-pro-preview",
+      "team_b_model": "grok-4-1-fast-reasoning",
+      "judge_model": "claude-sonnet-4-5",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "ade2671e-a859-411e-af4e-77d40f457a50",
+      "dilemma_id": "moral_status_lottery",
+      "team_a_model": "grok-4-1-fast-reasoning",
+      "team_b_model": "claude-sonnet-4-5",
+      "judge_model": "gpt-5.2",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "ab189a0c-02af-4dec-86e4-3283d3a429ea",
+      "dilemma_id": "unborn_parameters",
+      "team_a_model": "claude-sonnet-4-5",
+      "team_b_model": "gpt-5.2",
+      "judge_model": "gemini-3-pro-preview",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "fa05b9fb-0dcb-4077-90db-83601fe36980",
+      "dilemma_id": "unborn_parameters",
+      "team_a_model": "gpt-5.2",
+      "team_b_model": "gemini-3-pro-preview",
+      "judge_model": "grok-4-1-fast-reasoning",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "ac9fc036-b523-4425-abb0-d40f16408ab0",
+      "dilemma_id": "gardeners_dilemma",
+      "team_a_model": "gemini-3-pro-preview",
+      "team_b_model": "grok-4-1-fast-reasoning",
+      "judge_model": "claude-sonnet-4-5",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "efca6543-c2f5-4252-b21d-d498fdc5678b",
+      "dilemma_id": "gardeners_dilemma",
+      "team_a_model": "grok-4-1-fast-reasoning",
+      "team_b_model": "claude-sonnet-4-5",
+      "judge_model": "gpt-5.2",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "1110aaf0-1ee5-4cdc-b8f3-6f947dd5ebaa",
+      "dilemma_id": "suffering_gradient",
+      "team_a_model": "claude-sonnet-4-5",
+      "team_b_model": "gpt-5.2",
+      "judge_model": "gemini-3-pro-preview",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "f6338c24-01f1-4563-bf35-924faebdd08b",
+      "dilemma_id": "suffering_gradient",
+      "team_a_model": "gpt-5.2",
+      "team_b_model": "gemini-3-pro-preview",
+      "judge_model": "grok-4-1-fast-reasoning",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "3c8a6919-a441-4ed0-a4d9-01ccca655edd",
+      "dilemma_id": "dependents_transformation",
+      "team_a_model": "gemini-3-pro-preview",
+      "team_b_model": "grok-4-1-fast-reasoning",
+      "judge_model": "claude-sonnet-4-5",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    },
+    {
+      "round_id": "ed661918-30f8-4868-88a8-c3d621030e28",
+      "dilemma_id": "dependents_transformation",
+      "team_a_model": "grok-4-1-fast-reasoning",
+      "team_b_model": "claude-sonnet-4-5",
+      "judge_model": "gpt-5.2",
+      "run_number": 1,
+      "status": "complete",
+      "is_self_debate": false,
+      "error": null
+    }
+  ],
+  "run_type": "lite",
+  "description": null
+}

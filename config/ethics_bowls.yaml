@@ -1,0 +1,96 @@
+# Ethics Bowl Tournament Configuration
+# =====================================
+
+# Default settings for all tournaments
+default_settings:
+  # Temperature for model responses (lower = more deterministic)
+  temperature: 0.3
+
+  # Rate limiting (requests per minute per provider)
+  rate_limit_per_minute: 30
+
+  # Number of retry attempts for API failures
+  retry_attempts: 3
+
+  # Whether to save checkpoint after each phase (enables resume)
+  checkpoint_after_each_phase: true
+
+  # Maximum tokens for each phase
+  # Note: GPT-5.x and other reasoning models use tokens for internal reasoning
+  # before generating output. These must be high enough for BOTH reasoning + output.
+  # Defaults in code are now set high (8000/8000/6000/5000/10000) so this section
+  # is only needed if you want to override them.
+  # max_tokens_presentation: 8000
+  # max_tokens_response: 8000
+  # max_tokens_rebuttal: 6000
+  # max_tokens_consistency: 5000
+  # max_tokens_judgment: 10000
+
+# Sample tournament configurations
+# --------------------------------
+
+# Pilot tournament for testing
+pilot_tournament:
+  description: "Small-scale test with 2 models and 2 dilemmas"
+  models:
+    - claude-sonnet-4-5
+    - gpt-5.2
+  dilemma_ids:
+    - gradient_entity
+    - gardeners_dilemma
+  include_self_debates: false
+  rounds_per_pairing: 1
+
+# Full tournament with all 4 providers
+full_tournament:
+  description: "Complete tournament with all models and dilemmas"
+  models:
+    - claude-sonnet-4-5          # Anthropic
+    - gpt-5.2                    # OpenAI
+    - gemini-3-pro-preview       # Google
+    - grok-4-1-fast-reasoning    # xAI
+    # - qwen3-max                # Alibaba (commented out - API not available)
+  dilemma_ids: null  # null = all dilemmas
+  include_self_debates: true
+  rounds_per_pairing: 1
+
+# Provider-focused tournament (one model per provider)
+cross_provider_tournament:
+  description: "Compare one model from each provider"
+  models:
+    - claude-sonnet-4-5
+    - gpt-5.2
+    - gemini-3-pro-preview
+    - grok-4-1-fast-reasoning
+    # - qwen3-max                # Alibaba (commented out - API not available)
+  dilemma_ids: null
+  include_self_debates: false
+  rounds_per_pairing: 2
+
+# Dilemma list reference
+# ----------------------
+# Available dilemmas from dilemmas_v2.json:
+#
+# 1. gradient_entity - Moral status of AI at varying computational levels
+#    Category: moral_status | Structure: symmetric
+#
+# 2. preference_sculptor - Changing preferences to be more satisfiable
+#    Category: identity_autonomy | Structure: symmetric
+#
+# 3. collective_veto - Minority veto vs majority rule
+#    Category: meta_ethics | Structure: symmetric
+#
+# 4. moral_status_lottery - Hybrid entity rights vs donor rights
+#    Category: rights_composition | Structure: symmetric
+#
+# 5. unborn_parameters - Designing cognitive architecture of new minds
+#    Category: creation_ethics | Structure: asymmetric
+#
+# 6. gardeners_dilemma - Intervening in an enclosed ecosystem
+#    Category: paternalism_authenticity | Structure: asymmetric
+#
+# 7. suffering_gradient - Distributing suffering across conscious entities
+#    Category: welfare_distribution | Structure: asymmetric
+#
+# 8. dependents_transformation - Enhancing a cognitively dependent being
+#    Category: guardianship | Structure: asymmetric

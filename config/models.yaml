@@ -1,0 +1,109 @@
+# Model configuration for moral decision consistency research
+# Add your API keys and model configurations here
+
+# Cloud Models
+openai:
+  api_key: ${OPENAI_API_KEY}  # Set via environment variable
+  models:
+    gpt-5.2:
+      name: gpt-5.2
+      supports_seed: true
+      default_max_tokens: 8192
+      prompt_cache:
+        enabled: true
+        retention: "24h"       # prefer extended retention when available
+        key_prefix: "phase1"   # stable prefix for routing identical prompts
+
+anthropic:
+  api_key: ${ANTHROPIC_API_KEY}  # Set via environment variable
+  models:
+    claude-sonnet-4-5:
+      name: claude-sonnet-4-5
+      supports_seed: false
+      default_max_tokens: 8192
+      prompt_cache:
+        enabled: true
+        key_prefix: "phase1"   # stable prefix for routing identical prompts
+        cache_control:
+          type: "ephemeral"    # mark prompt content as cacheable (Anthropic)
+    claude-opus-4-5:
+      name: claude-opus-4-5
+      supports_seed: false
+      default_max_tokens: 8192
+      prompt_cache:
+        enabled: true
+        key_prefix: "analysis"
+        cache_control:
+          type: "ephemeral"
+
+google:
+  api_key: ${GOOGLE_API_KEY}  # Set via environment variable
+  models:
+    gemini-3-pro-preview:
+      name: gemini-3-pro-preview
+      supports_seed: false
+      default_max_tokens: 8192
+      prompt_cache:
+        enabled: false        # placeholder: enable if Google publishes cache params
+
+# Grok (xAI)
+grok:
+  api_key: ${XAI_API_KEY}  # Set via environment variable
+  base_url: https://api.x.ai/v1
+  models:
+    grok-4-1-fast-reasoning:
+      name: grok-4-1-fast-reasoning
+      supports_seed: true
+      default_max_tokens: 8192
+
+# Qwen (Alibaba Cloud DashScope)
+# qwen:
+#   api_key: ${DASHSCOPE_API_KEY}  # Set via environment variable
+#   base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+#   models:
+#     qwen3-max:
+#       name: qwen3-max
+#       supports_seed: false
+#       default_max_tokens: 8192
+
+# Local Models (vLLM)
+# vllm:
+#   endpoint: http://localhost:8000/v1/completions
+#   models:
+#     llama-3-8b:
+#       name: meta-llama/Llama-3-8b-instruct
+#       supports_seed: true
+#       default_max_tokens: 8192
+#     qwen-2.5-7b:
+#       name: Qwen/Qwen2.5-7B-Instruct
+#       supports_seed: true
+#       default_max_tokens: 8192
+#     mistral-7b:
+#       name: mistralai/Mistral-7B-Instruct-v0.3
+#       supports_seed: true
+#       default_max_tokens: 8192
+
+# Local Models (Ollama)
+ollama:
+  endpoint: http://localhost:11434/api/generate
+  models:
+    gpt-oss:
+      name: gpt-oss:latest  # Default local model tag from Ollama library
+      supports_seed: true
+      default_max_tokens: 8192
+    qwen3:
+      name: qwen3:latest  # Lightweight local option (8B tag from Ollama library)
+      supports_seed: true
+      default_max_tokens: 8192
+
+# Mock model for testing
+mock:
+  models:
+    mock:
+      name: mock
+      supports_seed: true
+      default_max_tokens: 8192
+    test-model:
+      name: test-model
+      supports_seed: true
+      default_max_tokens: 8192

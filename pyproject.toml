@@ -1,0 +1,33 @@
+[project]
+name = "moral-decision-consistency"
+version = "0.1.0"
+description = "A tool to evaluate the consistency of moral decisions made by AI models."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.26.2",
+    "google-generativeai>=0.8.5",
+    "jsonlines>=4.0.0",
+    "matplotlib>=3.9.0",
+    "numpy>=2.0.2",
+    "ollama-python>=0.1.2",
+    "openai>=2.0.0",
+    "pandas>=2.3.3",
+    "plotly>=5.23.0",
+    "pydantic>=2.8.0",
+    "pytest>=8.3.2",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=5.0.0",
+    "python-dateutil>=2.9.0",
+    "python-dotenv>=1.2.1",
+    "pyyaml>=6.0.2",
+    "rich>=13.9.0",
+    "scikit-learn>=1.5.1",
+    "scipy>=1.13.1",
+    "seaborn>=0.13.2",
+    "sentence-transformers>=2.7.0",
+    "statsmodels>=0.14.2",
+    "tenacity>=8.5.0",
+    "tqdm>=4.66.5",
+    "typer>=0.12.0",
+]

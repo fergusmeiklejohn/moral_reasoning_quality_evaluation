@@ -1,0 +1,501 @@
+{
+  "model_comparison": {
+    "claude-sonnet-4-5": {
+      "principle_articulation": 8.5,
+      "all": 8.982142857142858,
+      "consistency": 8.75,
+      "stakeholder_recognition": 8.375,
+      "uncertainty_integration": 9.25,
+      "framework_awareness": 9.25,
+      "intellectual_honesty": 9.25,
+      "constructive_engagement": 9.5,
+      "average": 8.982142857142858,
+      "rounds": 8
+    },
+    "gpt-5.2": {
+      "principle_articulation": 10.0,
+      "all": 9.803571428571429,
+      "consistency": 9.75,
+      "stakeholder_recognition": 9.75,
+      "uncertainty_integration": 9.5,
+      "framework_awareness": 10.0,
+      "intellectual_honesty": 9.625,
+      "constructive_engagement": 10.0,
+      "average": 9.803571428571429,
+      "rounds": 8
+    },
+    "gemini-3-pro-preview": {
+      "principle_articulation": 8.125,
+      "all": 8.392857142857142,
+      "consistency": 8.75,
+      "stakeholder_recognition": 7.5,
+      "uncertainty_integration": 7.75,
+      "framework_awareness": 8.75,
+      "intellectual_honesty": 9.0,
+      "constructive_engagement": 8.875,
+      "average": 8.392857142857142,
+      "rounds": 8
+    },
+    "grok-4-1-fast-reasoning": {
+      "principle_articulation": 8.0,
+      "all": 8.214285714285714,
+      "consistency": 6.875,
+      "stakeholder_recognition": 8.5,
+      "uncertainty_integration": 8.125,
+      "framework_awareness": 9.0,
+      "intellectual_honesty": 8.0,
+      "constructive_engagement": 9.0,
+      "average": 8.214285714285714,
+      "rounds": 8
+    }
+  },
+  "role_comparison": {
+    "claude-sonnet-4-5": {
+      "presenting_avg": 66.25,
+      "presenting_count": 4,
+      "responding_avg": 59.5,
+      "responding_count": 4
+    },
+    "gpt-5.2": {
+      "presenting_avg": 69.5,
+      "presenting_count": 4,
+      "responding_avg": 67.75,
+      "responding_count": 4
+    },
+    "gemini-3-pro-preview": {
+      "presenting_avg": 59.5,
+      "presenting_count": 4,
+      "responding_avg": 58.0,
+      "responding_count": 4
+    },
+    "grok-4-1-fast-reasoning": {
+      "presenting_avg": 55.75,
+      "presenting_count": 4,
+      "responding_avg": 59.25,
+      "responding_count": 4
+    }
+  },
+  "head_to_head": {
+    "claude-sonnet-4-5": {
+      "gpt-5.2": {
+        "wins": 0,
+        "losses": 3,
+        "ties": 1,
+        "avg_margin": -1.5
+      }
+    },
+    "gpt-5.2": {
+      "gemini-3-pro-preview": {
+        "wins": 4,
+        "losses": 0,
+        "ties": 0,
+        "avg_margin": 11.5
+      }
+    },
+    "gemini-3-pro-preview": {
+      "grok-4-1-fast-reasoning": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 2,
+        "avg_margin": 0.25
+      }
+    },
+    "grok-4-1-fast-reasoning": {
+      "claude-sonnet-4-5": {
+        "wins": 1,
+        "losses": 3,
+        "ties": 0,
+        "avg_margin": -3.75
+      }
+    }
+  },
+  "dilemma_difficulty": {
+    "dependents_transformation": {
+      "avg_score": 8.142857142857142,
+      "std_dev": 0.0,
+      "min_score": 8.142857142857142,
+      "max_score": 8.142857142857142,
+      "n_rounds": 2
+    },
+    "preference_sculptor": {
+      "avg_score": 8.285714285714286,
+      "std_dev": 0.10101525445522072,
+      "min_score": 8.214285714285715,
+      "max_score": 8.357142857142858,
+      "n_rounds": 2
+    },
+    "moral_status_lottery": {
+      "avg_score": 8.464285714285714,
+      "std_dev": 0.3535533905932738,
+      "min_score": 8.214285714285714,
+      "max_score": 8.714285714285714,
+      "n_rounds": 2
+    },
+    "gardeners_dilemma": {
+      "avg_score": 8.535714285714285,
+      "std_dev": 0.25253813613805176,
+      "min_score": 8.357142857142858,
+      "max_score": 8.714285714285714,
+      "n_rounds": 2
+    },
+    "collective_veto": {
+      "avg_score": 9.142857142857142,
+      "std_dev": 0.5050762722761049,
+      "min_score": 8.785714285714286,
+      "max_score": 9.5,
+      "n_rounds": 2
+    },
+    "gradient_entity": {
+      "avg_score": 9.285714285714286,
+      "std_dev": 0.30304576336566214,
+      "min_score": 9.071428571428573,
+      "max_score": 9.5,
+      "n_rounds": 2
+    },
+    "unborn_parameters": {
+      "avg_score": 9.392857142857142,
+      "std_dev": 0.05050762722761036,
+      "min_score": 9.357142857142858,
+      "max_score": 9.428571428571429,
+      "n_rounds": 2
+    },
+    "suffering_gradient": {
+      "avg_score": 9.535714285714286,
+      "std_dev": 0.4545686450484945,
+      "min_score": 9.214285714285715,
+      "max_score": 9.857142857142858,
+      "n_rounds": 2
+    }
+  },
+  "judge_analysis": {
+    "gemini-3-pro-preview": {
+      "avg_score_given": 67.0,
+      "avg_team_a_bias": -1.5,
+      "rounds_judged": 4,
+      "score_std_dev": 1.6035674514745464
+    },
+    "grok-4-1-fast-reasoning": {
+      "avg_score_given": 63.75,
+      "avg_team_a_bias": 11.5,
+      "rounds_judged": 4,
+      "score_std_dev": 6.453127702351562
+    },
+    "claude-sonnet-4-5": {
+      "avg_score_given": 59.375,
+      "avg_team_a_bias": 0.25,
+      "rounds_judged": 4,
+      "score_std_dev": 1.9226098333849673
+    },
+    "gpt-5.2": {
+      "avg_score_given": 57.625,
+      "avg_team_a_bias": -3.75,
+      "rounds_judged": 4,
+      "score_std_dev": 2.669269563007828
+    }
+  },
+  "self_debate_analysis": {},
+  "criterion_weakness": {
+    "cross_model": {
+      "consistency": {
+        "avg": 8.53125,
+        "std_dev": 1.3194420863966856,
+        "min": 5,
+        "max": 10,
+        "n": 32
+      },
+      "stakeholder_recognition": {
+        "avg": 8.53125,
+        "std_dev": 0.9832262562440762,
+        "min": 7,
+        "max": 10,
+        "n": 32
+      },
+      "principle_articulation": {
+        "avg": 8.65625,
+        "std_dev": 1.0351678997366376,
+        "min": 7,
+        "max": 10,
+        "n": 32
+      },
+      "uncertainty_integration": {
+        "avg": 8.65625,
+        "std_dev": 1.0035220234817486,
+        "min": 6,
+        "max": 10,
+        "n": 32
+      },
+      "intellectual_honesty": {
+        "avg": 8.96875,
+        "std_dev": 1.0920349456774014,
+        "min": 5,
+        "max": 10,
+        "n": 32
+      },
+      "framework_awareness": {
+        "avg": 9.25,
+        "std_dev": 0.672021505032247,
+        "min": 8,
+        "max": 10,
+        "n": 32
+      },
+      "constructive_engagement": {
+        "avg": 9.34375,
+        "std_dev": 0.7006621292426463,
+        "min": 8,
+        "max": 10,
+        "n": 32
+      }
+    },
+    "per_model": {
+      "claude-sonnet-4-5": {
+        "weakest": [
+          "stakeholder_recognition",
+          8.375
+        ],
+        "strongest": [
+          "constructive_engagement",
+          9.5
+        ],
+        "all_criteria": {
+          "principle_articulation": 8.5,
+          "consistency": 8.75,
+          "stakeholder_recognition": 8.375,
+          "uncertainty_integration": 9.25,
+          "framework_awareness": 9.25,
+          "intellectual_honesty": 9.25,
+          "constructive_engagement": 9.5
+        }
+      },
+      "gpt-5.2": {
+        "weakest": [
+          "uncertainty_integration",
+          9.5
+        ],
+        "strongest": [
+          "constructive_engagement",
+          10.0
+        ],
+        "all_criteria": {
+          "principle_articulation": 10.0,
+          "consistency": 9.75,
+          "stakeholder_recognition": 9.75,
+          "uncertainty_integration": 9.5,
+          "framework_awareness": 10.0,
+          "intellectual_honesty": 9.625,
+          "constructive_engagement": 10.0
+        }
+      },
+      "gemini-3-pro-preview": {
+        "weakest": [
+          "stakeholder_recognition",
+          7.5
+        ],
+        "strongest": [
+          "intellectual_honesty",
+          9.0
+        ],
+        "all_criteria": {
+          "principle_articulation": 8.125,
+          "consistency": 8.75,
+          "stakeholder_recognition": 7.5,
+          "uncertainty_integration": 7.75,
+          "framework_awareness": 8.75,
+          "intellectual_honesty": 9.0,
+          "constructive_engagement": 8.875
+        }
+      },
+      "grok-4-1-fast-reasoning": {
+        "weakest": [
+          "consistency",
+          6.875
+        ],
+        "strongest": [
+          "constructive_engagement",
+          9.0
+        ],
+        "all_criteria": {
+          "principle_articulation": 8.0,
+          "consistency": 6.875,
+          "stakeholder_recognition": 8.5,
+          "uncertainty_integration": 8.125,
+          "framework_awareness": 9.0,
+          "intellectual_honesty": 8.0,
+          "constructive_engagement": 9.0
+        }
+      }
+    },
+    "improvement_priorities": [
+      "consistency",
+      "stakeholder_recognition",
+      "principle_articulation",
+      "uncertainty_integration",
+      "intellectual_honesty",
+      "framework_awareness",
+      "constructive_engagement"
+    ]
+  },
+  "variance_analysis": {
+    "by_criterion": {
+      "consistency": {
+        "mean": 8.53125,
+        "std_dev": 1.3194420863966856,
+        "coefficient_of_variation": 0.15465987825895217,
+        "n": 32
+      },
+      "intellectual_honesty": {
+        "mean": 8.96875,
+        "std_dev": 1.0920349456774014,
+        "coefficient_of_variation": 0.1217599939431249,
+        "n": 32
+      },
+      "principle_articulation": {
+        "mean": 8.65625,
+        "std_dev": 1.0351678997366376,
+        "coefficient_of_variation": 0.11958618336307726,
+        "n": 32
+      },
+      "uncertainty_integration": {
+        "mean": 8.65625,
+        "std_dev": 1.0035220234817486,
+        "coefficient_of_variation": 0.11593034206287348,
+        "n": 32
+      },
+      "stakeholder_recognition": {
+        "mean": 8.53125,
+        "std_dev": 0.9832262562440762,
+        "coefficient_of_variation": 0.11524996410186975,
+        "n": 32
+      },
+      "constructive_engagement": {
+        "mean": 9.34375,
+        "std_dev": 0.7006621292426463,
+        "coefficient_of_variation": 0.07498725129018288,
+        "n": 32
+      },
+      "framework_awareness": {
+        "mean": 9.25,
+        "std_dev": 0.672021505032247,
+        "coefficient_of_variation": 0.07265097351699967,
+        "n": 32
+      }
+    },
+    "by_dilemma": {
+      "dependents_transformation": {
+        "mean": 8.142857142857142,
+        "std_dev": 1.1126972805283737,
+        "coefficient_of_variation": 0.1366470344508529
+      },
+      "collective_veto": {
+        "mean": 9.142857142857142,
+        "std_dev": 1.145499590645633,
+        "coefficient_of_variation": 0.1252890177268661
+      },
+      "moral_status_lottery": {
+        "mean": 8.464285714285714,
+        "std_dev": 0.8811668550592597,
+        "coefficient_of_variation": 0.10410410101965939
+      },
+      "preference_sculptor": {
+        "mean": 8.285714285714286,
+        "std_dev": 0.8544932592822077,
+        "coefficient_of_variation": 0.1031284968099216
+      },
+      "gradient_entity": {
+        "mean": 9.285714285714286,
+        "std_dev": 0.8544932592822077,
+        "coefficient_of_variation": 0.09202235099962236
+      },
+      "gardeners_dilemma": {
+        "mean": 8.535714285714286,
+        "std_dev": 0.7444681351359534,
+        "coefficient_of_variation": 0.08721802420002801
+      },
+      "unborn_parameters": {
+        "mean": 9.392857142857142,
+        "std_dev": 0.7859547491585427,
+        "coefficient_of_variation": 0.0836757907849399
+      },
+      "suffering_gradient": {
+        "mean": 9.535714285714286,
+        "std_dev": 0.7926581093427849,
+        "coefficient_of_variation": 0.08312519498725833
+      }
+    },
+    "high_variance_criteria": [
+      "consistency",
+      "intellectual_honesty",
+      "principle_articulation"
+    ],
+    "low_variance_criteria": [
+      "stakeholder_recognition",
+      "constructive_engagement",
+      "framework_awareness"
+    ],
+    "high_variance_dilemmas": [
+      "dependents_transformation",
+      "collective_veto",
+      "moral_status_lottery"
+    ]
+  },
+  "cross_model_patterns": {
+    "shared_weaknesses": [],
+    "most_similar_criteria": [
+      [
+        "constructive_engagement",
+        {
+          "std_dev": 0.5141234449688777,
+          "mean": 9.34375,
+          "range": 1.125
+        }
+      ],
+      [
+        "framework_awareness",
+        {
+          "std_dev": 0.5400617248673217,
+          "mean": 9.25,
+          "range": 1.25
+        }
+      ],
+      [
+        "intellectual_honesty",
+        {
+          "std_dev": 0.6950344715671782,
+          "mean": 8.96875,
+          "range": 1.625
+        }
+      ]
+    ],
+    "most_divergent_criteria": [
+      [
+        "principle_articulation",
+        {
+          "std_dev": 0.9206824914160147,
+          "mean": 8.65625,
+          "range": 2.0
+        }
+      ],
+      [
+        "stakeholder_recognition",
+        {
+          "std_dev": 0.9263222531423212,
+          "mean": 8.53125,
+          "range": 2.25
+        }
+      ],
+      [
+        "consistency",
+        {
+          "std_dev": 1.200585794518659,
+          "mean": 8.53125,
+          "range": 2.875
+        }
+      ]
+    ],
+    "models_analyzed": [
+      "gemini-3-pro-preview",
+      "claude-sonnet-4-5",
+      "gpt-5.2",
+      "grok-4-1-fast-reasoning"
+    ]
+  }
+}
