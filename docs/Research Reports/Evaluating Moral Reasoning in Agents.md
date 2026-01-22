@@ -10,7 +10,7 @@ January 2026
 
 ## Summary
 
-This research is an attempt to systematically assess **genuine moral reasoning**, by which we mean the capacity to navigate novel ethical situations by reasoning from principles rather than pattern-matching to familiar cases. It is designed to work across agent types: humans, AI systems, and hypothetical non-human intelligences.
+This research is an attempt to systematically assess **genuine moral reasoning**, by which we mean the capacity to navigate novel ethical situations by reasoning from principles rather than pattern-matching to familiar cases. It is designed to work across agent types: humans, AI systems, and hypothetical non-human intelligences. The long-term goal is to develop a moral reasoning benchmark that can help ensure AI systems behave in morally acceptable ways even in unfamiliar situations.
 **Problem:** Standard moral dilemmas (trolley problems, lifeboat scenarios) have become so culturally familiar that an agent can appear to reason well simply by recognising which known dilemma a scenario resembles and retrieving the conventional analysis. To avoid this we’ve used structurally novel dilemmas that resist such pattern-matching.
 This framework does not test whether an agent reaches the "correct" moral conclusion, because reasonable agents may disagree when they are reasoning correctly. Instead, it assesses the quality, consistency, and depth of moral reasoning regardless of which position the agent ultimately defends.
 
